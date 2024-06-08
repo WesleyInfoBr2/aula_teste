@@ -16,15 +16,15 @@ st.dataframe(dfe.head(3))
 st.write("Gráfico de linha dos indicadores ao longo do tempo")
 
 fig, ax = plt.subplots()
-dfe.plot()
+dfe.plot(ax=ax)
 st.pyplot(fig)
 
-# fig, ax = plt.subplots()
-dfe.plot(kind = 'scatter', x = 'EBITDA', y = 'Lucro operacional')
+fig, ax = plt.subplots()
+dfe.plot(kind = 'scatter', x = 'EBITDA', y = 'Lucro operacional', ax=ax)
 st.pyplot(fig)
 
-# fig, ax = plt.subplots()
-dfe["Lucro do período"].plot(kind = 'hist')
+fig, ax = plt.subplots()
+dfe["Lucro do período"].plot(kind = 'hist', ax=ax)
 st.pyplot(fig)
 
 
