@@ -13,6 +13,8 @@ arquivo = "https://raw.githubusercontent.com/WesleyInfoBr2/aula_teste/main/empre
 dfe = pd.read_csv(arquivo, sep=';') 
 st.dataframe(dfe.head(3))
 
+st.write("Gráfico de linha dos indicadores ao longo do tempo")
+
 fig, ax = plt.subplots()
 dfe.plot()
 st.pyplot(fig)
